@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Candy - Chats are not dead yet</title>
+    <link rel="shortcut icon" href="./res/img/favicon.png" type="image/gif" />
+    <link rel="stylesheet" type="text/css" href="./res/default.css" />
+    <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/colors/candy.css" />
+    <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/gs-clearchat/candy.css" />
+    <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/gs-namecomplete/candy.css" />
+    <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/gs-notifyme/candy.css" />
+    <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/inlineimages/candy.css" />
+  </head>
+
+  <body>
+    <div id="candy"></div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="./lib/candy/libs/libs.bundle.js"></script>
+    <script type="text/javascript" src="./lib/candy/candy.bundle.js"></script>
+
+    <script type="text/javascript" src="./lib/candy-plugins/colors/candy.js"></script>
+    <script type="text/javascript" src="./lib/candy-plugins/gs-chatrecall/candy.js"></script>
+    <script type="text/javascript" src="./lib/candy-plugins/gs-clearchat/candy.js"></script>
+    <script type="text/javascript" src="./lib/candy-plugins/gs-namecomplete/candy.js"></script>
+    <script type="text/javascript" src="./lib/candy-plugins/gs-notifyme/candy.js"></script>
+    <script type="text/javascript" src="./lib/candy-plugins/inlineimages/candy.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        var connection,
+            setUpPing = function(){
+                connection = Candy.Core.getConnection();
+
+              connection.ping.addPingHandler(function(ping){
+                connection.ping.pong(ping);
+                return true;
+              });
+            };
+
+        Candy.init('http://talk.exoplay.net:5280/http-bind/', {
+          core: { debug: true, autojoin: ["ol-dev@conference.talk.exoplay.net"] },
+          view: { resources: './res/' }
+        });
+
+        CandyShop.InlineImages.init();
+        CandyShop.Colors.init();
+
+        CandyShop.NotifyMe.init();
+        CandyShop.NameComplete.init();
+        CandyShop.ChatRecall.init();
+        CandyShop.ClearChat.init();
+
+        Candy.Core.connect();
+        //Candy.Core.addHandler(setUpPing, Strophe.NS.VERSION, 'iq');
+      });
+    </script>
+  </body>
+</html>
