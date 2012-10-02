@@ -1,4 +1,4 @@
 cathy
 =====
 
-Candy + Plugins
+Exoplay bundle of Candy chat and plugins.

@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/gs-namecomplete/candy.css" />
     <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/gs-notifyme/candy.css" />
     <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/inlineimages/candy.css" />
+    <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/me/candy.css" />
   </head>
 
   <body>
@@ -26,6 +27,7 @@
     <script type="text/javascript" src="./lib/candy-plugins/gs-namecomplete/candy.js"></script>
     <script type="text/javascript" src="./lib/candy-plugins/gs-notifyme/candy.js"></script>
     <script type="text/javascript" src="./lib/candy-plugins/inlineimages/candy.js"></script>
+    <script type="text/javascript" src="./lib/candy-plugins/me/candy.js"></script>
 
     <script type="text/javascript">
       $(function() {
@@ -51,6 +53,7 @@
         CandyShop.NameComplete.init();
         CandyShop.ChatRecall.init();
         CandyShop.ClearChat.init();
+        CandyShop.Me.init();
 
         Candy.Core.connect();
         //Candy.Core.addHandler(setUpPing, Strophe.NS.VERSION, 'iq');
