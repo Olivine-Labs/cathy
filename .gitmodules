@@ -1,6 +1,6 @@
 [submodule "lib/candy"]
 	path = lib/candy
-	url = git@github.com:Olivine-Labs/candy.git
+	url = git://github.com/Olivine-Labs/candy.git
 [submodule "lib/candy-plugins"]
 	path = lib/candy-plugins
-	url = git@github.com:Olivine-Labs/candy-plugins.git
+	url = git://github.com/Olivine-Labs/candy-plugins.git
