@@ -5,12 +5,11 @@
     <title>Candy - Chats are not dead yet</title>
     <link rel="shortcut icon" href="./res/img/favicon.png" type="image/gif" />
     <link rel="stylesheet" type="text/css" href="./res/default.css" />
-    <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/colors/candy.css" />
     <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/gs-clearchat/candy.css" />
     <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/gs-namecomplete/candy.css" />
     <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/gs-notifyme/candy.css" />
     <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/inlineimages/candy.css" />
-    <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/me/candy.css" />
+    <link rel="stylesheet" type="text/css" href="./lib/candy-plugins/linkifier/candy.css" />
   </head>
 
   <body>
@@ -21,13 +20,12 @@
     <script type="text/javascript" src="./lib/candy/libs/libs.bundle.js"></script>
     <script type="text/javascript" src="./lib/candy/candy.bundle.js"></script>
 
-    <script type="text/javascript" src="./lib/candy-plugins/colors/candy.js"></script>
     <script type="text/javascript" src="./lib/candy-plugins/gs-chatrecall/candy.js"></script>
     <script type="text/javascript" src="./lib/candy-plugins/gs-clearchat/candy.js"></script>
     <script type="text/javascript" src="./lib/candy-plugins/gs-namecomplete/candy.js"></script>
     <script type="text/javascript" src="./lib/candy-plugins/gs-notifyme/candy.js"></script>
     <script type="text/javascript" src="./lib/candy-plugins/inlineimages/candy.js"></script>
-    <script type="text/javascript" src="./lib/candy-plugins/me/candy.js"></script>
+    <script type="text/javascript" src="./lib/candy-plugins/linkifier/candy.js"></script>
 
     <script type="text/javascript">
       $(function() {
@@ -47,13 +45,12 @@
         });
 
         CandyShop.InlineImages.init();
-        CandyShop.Colors.init();
 
         CandyShop.NotifyMe.init();
         CandyShop.NameComplete.init();
         CandyShop.ChatRecall.init();
         CandyShop.ClearChat.init();
-        CandyShop.Me.init();
+        CandyShop.Linkifier.init();
 
         Candy.Core.connect();
         //Candy.Core.addHandler(setUpPing, Strophe.NS.VERSION, 'iq');
